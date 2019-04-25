@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oh Shit the train is here!</title>
+
+    <!-- Our CSS style sheet -->
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="Assets/CSS/Normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="row bg-dark text-white">
+            <div class="col-md" id="title">
+                <h1>Oh Shit the Train is Here!</h1>
+                <h3>A completely made up and bogus train scheduler!</h3>
+            </div>
+        </div>
+        <div class=row class="border border-dark">
+            <table class="table border border-dark" id="schedule">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th id=tHeader1>Train Name</th>
+                        <th id=tHeader2>Destination</th>
+                        <th id=tHeader3>Frequency (min)</th>
+                        <th id=tHeader4>First Train</th>
+                        <th id=tHeader5>Minutes Away</th>
+                        <th id=header6>Next Train (Time)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
+            <div class="col-md">
+                <form id="tForm" class="border border-dark">
+                    <p>Train Name:</p>
+                    <input type="text" class="form-control" id="trainName"></input>
+                    <p>Destination:</p>
+                    <input type="text" class="form-control" id="trainDestination"></input>
+                    <p>First Train time:</p>
+                    <input type="text" class="form-control" id="trainFirst"></input>
+                    <p>Frequency (min):</p>
+                    <input type="text" class="form-control" id="trainFrequency"></input>
+                    <br><button type="submit" class="btn btn-primary" id="formSubmit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="Assets/Javascript/app.js"></script>
+</body>
+
+</html>
