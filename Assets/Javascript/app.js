@@ -59,7 +59,7 @@ database.ref().on("child_added", function (childSnapshot) {
 var obj = 0;
     var newtr = $("<tr>");
     var newtd = $("<td>");
-    var soonTD = $("<td bgcolor='#FF0000'>");
+    var soonTD = $("<td>", {style:'background-color:#FF0000'});
 
     // show name in table
     newtd.append(childSnapshot.val().name);
@@ -93,10 +93,10 @@ var obj = 0;
     // calculate the minutes until the next train
     var minutesTillTrain = freq - remainingTime;
     console.log('Minutes until next train123: ' + minutesTillTrain);
-    if(minutesTillTrain <=2) {
+    if(minutesTillTrain <= 2) {
         //  Display the next train time minutes in red if less than 2 minutes away
         soonTD.append(minutesTillTrain);
-        newtr.append(newtd);
+        newtr.append(soonTD);
         newtd = $("<td>")
     } else {
         // display the next train time in minutes
